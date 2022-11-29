@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1455018E2936090E00852BDE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1455018D2936090E00852BDE /* DetailViewController.swift */; };
+		14550191293613F100852BDE /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14550190293613F100852BDE /* AddViewController.swift */; };
 		1486834C2918E6B800C9EDAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486834B2918E6B800C9EDAE /* AppDelegate.swift */; };
 		1486834E2918E6B800C9EDAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486834D2918E6B800C9EDAE /* SceneDelegate.swift */; };
 		148683502918E6B800C9EDAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486834F2918E6B800C9EDAE /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1455018D2936090E00852BDE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		14550190293613F100852BDE /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		148683482918E6B800C9EDAE /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1486834B2918E6B800C9EDAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1486834D2918E6B800C9EDAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 				1486834D2918E6B800C9EDAE /* SceneDelegate.swift */,
 				1486834F2918E6B800C9EDAE /* ViewController.swift */,
 				148683512918E6B800C9EDAE /* Main.storyboard */,
+				14550190293613F100852BDE /* AddViewController.swift */,
+				1455018D2936090E00852BDE /* DetailViewController.swift */,
 				148683542918E6BF00C9EDAE /* Assets.xcassets */,
 				148683562918E6BF00C9EDAE /* LaunchScreen.storyboard */,
 				148683592918E6BF00C9EDAE /* Info.plist */,
@@ -145,7 +151,9 @@
 			files = (
 				148683642918EBE000C9EDAE /* TableViewCell.swift in Sources */,
 				148683502918E6B800C9EDAE /* ViewController.swift in Sources */,
+				14550191293613F100852BDE /* AddViewController.swift in Sources */,
 				1486834C2918E6B800C9EDAE /* AppDelegate.swift in Sources */,
+				1455018E2936090E00852BDE /* DetailViewController.swift in Sources */,
 				1486834E2918E6B800C9EDAE /* SceneDelegate.swift in Sources */,
 				148683612918EAFC00C9EDAE /* data.swift in Sources */,
 			);

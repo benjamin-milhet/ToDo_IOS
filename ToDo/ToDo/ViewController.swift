@@ -36,10 +36,23 @@ class ViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as! TableViewCell
         
         cell.myNom.text = myData[indexPath.row].nom
-        cell.myDesc.text = myData[indexPath.row].desc
+        //cell.myDesc.text = myData[indexPath.row].desc
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? DetailViewController {
+            let row = myTableView.indexPathForSelectedRow!.row
+            vc.data = myData[row]
+        }
+        
+        else if let vc = segue.destination as? AddViewController {
+            vc.data = myData
+        }
+    }
+    
+    
     
     
 
