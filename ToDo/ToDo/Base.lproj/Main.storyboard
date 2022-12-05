@@ -30,6 +30,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXK-VI-THN">
                                                     <rect key="frame" x="40" y="20" width="340" height="156"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="8nT-CF-jNq"/>
                                                         <constraint firstAttribute="width" constant="350" id="xdy-o1-vpR"/>
@@ -38,16 +39,44 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eIt-jr-iA4">
+                                                    <rect key="frame" x="283" y="21" width="49" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="TKb-pm-zpU"/>
+                                                        <constraint firstAttribute="width" constant="47" id="cyd-bJ-00e"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="changerIsCheck:" destination="BYZ-38-t0r" eventType="valueChanged" id="Sp7-re-YJT"/>
+                                                    </connections>
+                                                </switch>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7d-jJ-Y0b">
+                                                    <rect key="frame" x="220" y="21" width="53" height="49"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="53" id="SUN-E2-tDM"/>
+                                                        <constraint firstAttribute="height" constant="49" id="kGb-UW-il3"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                    <state key="normal" image="trash" catalog="system"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="W7d-jJ-Y0b" firstAttribute="top" secondItem="C13-oU-V0G" secondAttribute="topMargin" constant="10" id="8yt-LA-vIi"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eIt-jr-iA4" secondAttribute="bottom" constant="10" id="Ahw-Me-gNL"/>
                                                 <constraint firstItem="oXK-VI-THN" firstAttribute="top" secondItem="C13-oU-V0G" secondAttribute="top" constant="20" id="Gfj-yy-zME"/>
+                                                <constraint firstItem="W7d-jJ-Y0b" firstAttribute="leading" secondItem="C13-oU-V0G" secondAttribute="leadingMargin" constant="200" id="HdV-9f-086"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="W7d-jJ-Y0b" secondAttribute="bottom" constant="10" id="Id5-Mz-JDI"/>
                                                 <constraint firstItem="oXK-VI-THN" firstAttribute="trailing" secondItem="C13-oU-V0G" secondAttribute="trailingMargin" constant="10" id="KdK-1F-gd4"/>
                                                 <constraint firstItem="oXK-VI-THN" firstAttribute="leading" secondItem="C13-oU-V0G" secondAttribute="leadingMargin" constant="20" id="eBs-BL-TBC"/>
+                                                <constraint firstItem="eIt-jr-iA4" firstAttribute="leading" secondItem="W7d-jJ-Y0b" secondAttribute="trailing" constant="10" id="pLb-R9-gEc"/>
+                                                <constraint firstItem="eIt-jr-iA4" firstAttribute="top" secondItem="C13-oU-V0G" secondAttribute="topMargin" constant="10" id="pfp-nT-nra"/>
+                                                <constraint firstItem="eIt-jr-iA4" firstAttribute="leading" secondItem="C13-oU-V0G" secondAttribute="leadingMargin" constant="280" id="qEE-6U-Ozb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eIt-jr-iA4" secondAttribute="trailing" constant="15" id="qHh-wi-oe2"/>
                                                 <constraint firstAttribute="bottom" secondItem="oXK-VI-THN" secondAttribute="bottom" constant="20" id="zpI-ug-axW"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <gestureRecognizers/>
                                         <connections>
+                                            <outlet property="myCheck" destination="eIt-jr-iA4" id="hWu-jd-uSH"/>
                                             <outlet property="myNom" destination="oXK-VI-THN" id="MXM-K7-E4s"/>
                                             <segue destination="6OS-Q9-rEf" kind="show" id="gXb-48-PJo"/>
                                         </connections>
@@ -61,7 +90,9 @@
                     <navigationItem key="navigationItem" title="ToDo" id="ceI-8R-bwL">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="qfO-Rh-K7F">
                             <connections>
-                                <segue destination="yGe-RE-GTP" kind="show" id="iRv-1y-FnF"/>
+                                <segue destination="yGe-RE-GTP" kind="popoverPresentation" popoverAnchorBarButtonItem="qfO-Rh-K7F" id="DJz-ak-K30">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -77,7 +108,7 @@
         <scene sceneID="R9N-jw-fDN">
             <objects>
                 <viewController id="6OS-Q9-rEf" customClass="DetailViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="AJR-to-3Tg">
+                    <view key="view" contentMode="scaleToFill" id="AJR-to-3Tg">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -123,7 +154,7 @@
             <objects>
                 <viewController id="yGe-RE-GTP" customClass="AddViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2uc-wg-9NQ">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nfj-jz-X46">
@@ -156,6 +187,17 @@
                                 <rect key="frame" x="104" y="365" width="183" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Ajouter une nouvelle tâche"/>
+                                <connections>
+                                    <segue destination="9bM-Y3-2PL" kind="unwind" unwindAction="Save:" id="3K4-Me-sM3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TV-uk-jtA">
+                                <rect key="frame" x="342" y="17" width="18" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="xmark" catalog="system"/>
+                                <connections>
+                                    <segue destination="9bM-Y3-2PL" kind="unwind" unwindAction="Cancel:" id="NW7-p5-TyM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qiG-HV-MyT"/>
@@ -168,6 +210,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOC-9r-V9x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="9bM-Y3-2PL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1784.6153846153845" y="116.58767772511848"/>
         </scene>
@@ -192,6 +235,8 @@
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

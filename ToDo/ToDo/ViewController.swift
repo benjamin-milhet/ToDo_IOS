@@ -36,23 +36,39 @@ class ViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as! TableViewCell
         
         cell.myNom.text = myData[indexPath.row].nom
-        //cell.myDesc.text = myData[indexPath.row].desc
+        cell.myCheck.isOn = myData[indexPath.row].isCheck
         
         return cell
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? DetailViewController {
             let row = myTableView.indexPathForSelectedRow!.row
             vc.data = myData[row]
         }
-        
-        else if let vc = segue.destination as? AddViewController {
-            vc.data = myData
-        }
     }
     
+    @IBAction func Cancel(_ unwindSegue: UIStoryboardSegue) {
+        if let vc = unwindSegue.source as? AddViewController {
+            vc.dismiss(animated: true, completion: nil)
+        }
+        // Use data from the view controller which initiated the unwind segue
+    }
     
+    @IBAction func Save(_ unwindSegue: UIStoryboardSegue) {
+        if let vc = unwindSegue.source as? AddViewController {
+            if let addNewDataNom = vc.addNom, let addNewDataDesc = vc.addDesc {
+                myData.append(MyData(nom: addNewDataNom.text!, desc: addNewDataDesc.text!))
+            }
+            myTableView.reloadData()
+        }
+        // Use data from the view controller which initiated the unwind segue
+    }
+    
+    @IBAction func changerIsCheck(_ sender: UISwitch) {
+        
+    }
     
     
 

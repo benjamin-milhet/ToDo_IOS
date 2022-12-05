@@ -10,10 +10,11 @@ import UIKit
 class TableViewCell: UITableViewCell {
     @IBOutlet weak var myNom: UILabel!
     @IBOutlet weak var myDesc: UILabel!
+    @IBOutlet weak var myCheck: UISwitch!
     
     override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+            super.awakeFromNib()
+            // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -21,5 +22,5 @@ class TableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }
