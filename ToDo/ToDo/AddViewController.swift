@@ -10,7 +10,8 @@ import UIKit
 class AddViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var addNom: UITextField!
     @IBOutlet weak var addDesc: UITextField!
-        
+    @IBOutlet weak var addDate: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

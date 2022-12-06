@@ -11,10 +11,12 @@ class MyData {
     var nom: String
     var desc: String
     var isCheck: Bool
+    var dateRendu: Date
     
-    init(nom: String, desc: String) {
-        self.nom = nom
-        self.desc = desc
-        self.isCheck = false 
+    init(_nom: String, _desc: String, _date: Date) {
+        self.nom = _nom
+        self.desc = _desc
+        self.isCheck = false
+        self.dateRendu = _date
     }
 }

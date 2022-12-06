@@ -20,9 +20,11 @@ class ViewController: UIViewController, UITableViewDataSource {
         for i in 1...6 {
             let nom = "Tâche : " + String(i)
             let desc = "Ceci est une description de la tâche " + String(i)
-            let d = MyData(nom: nom, desc: desc)
+            let date = Date()
+            let d = MyData(_nom: nom, _desc: desc, _date: date)
             myData.append(d)
         }
+        
         
         myTableView.dataSource = self
     }
@@ -37,7 +39,8 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         cell.myNom.text = myData[indexPath.row].nom
         cell.myCheck.isOn = myData[indexPath.row].isCheck
-        
+        cell.myCheck.tag = indexPath.row
+        cell.myDelete.tag = indexPath.row
         return cell
     }
     
@@ -58,8 +61,8 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     @IBAction func Save(_ unwindSegue: UIStoryboardSegue) {
         if let vc = unwindSegue.source as? AddViewController {
-            if let addNewDataNom = vc.addNom, let addNewDataDesc = vc.addDesc {
-                myData.append(MyData(nom: addNewDataNom.text!, desc: addNewDataDesc.text!))
+            if let addNewDataNom = vc.addNom, let addNewDataDesc = vc.addDesc, let addNewDataDate = vc.addDate {
+                myData.append(MyData(_nom: addNewDataNom.text!, _desc: addNewDataDesc.text!, _date: addNewDataDate.date))
             }
             myTableView.reloadData()
         }
@@ -67,8 +70,16 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     @IBAction func changerIsCheck(_ sender: UISwitch) {
-        
+        let row = sender.tag
+        myData[row].isCheck = sender.isOn
     }
+    
+    @IBAction func deleteData(_ sender: UIButton) {
+        let row = sender.tag
+        myData.remove(at: row)
+        myTableView.reloadData()
+    }
+    
     
     
 
