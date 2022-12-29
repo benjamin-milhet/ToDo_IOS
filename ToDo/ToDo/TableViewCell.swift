@@ -10,8 +10,8 @@ import UIKit
 class TableViewCell: UITableViewCell {
     @IBOutlet weak var myNom: UILabel!
     @IBOutlet weak var myDesc: UILabel!
+    @IBOutlet weak var myDate: UILabel!
     @IBOutlet weak var myCheck: UISwitch!
-    @IBOutlet weak var myDelete: UIButton!
     
     override func awakeFromNib() {
             super.awakeFromNib()

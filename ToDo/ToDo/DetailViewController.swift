@@ -22,12 +22,7 @@ class DetailViewController: UIViewController {
             nomTache.text = tache.nom
             nomDesc.text = tache.desc
             barreControle.title = tache.nom
-            
-            let dateFormater = DateFormatter()
-            dateFormater.dateFormat = "EEEE dd MMMM yyyy - hh:mm:ss"
-            dateFormater.locale = Locale(identifier: "FR-fr")
-            let dateFormat = dateFormater.string(from: tache.dateRendu)
-            myDate.text = dateFormat
+            myDate.text = tache.convertDate()
         } else {
             nomTache.text = "Erreur lors du chargement"
             nomDesc.text = ""
