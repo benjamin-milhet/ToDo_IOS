@@ -24,18 +24,21 @@ Au début, la plus grande diffulté était de prendre en main le langage Swift e
 ### Rendu du bouton supprimer une catégorie
 ![alt text](https://github.com/benjamin-milhet/ToDo_IOS/blob/main/images/deleteCategorie.png?raw=true)
 
-### Rendu du bouton supprimer une catégorie
-![alt text](https://github.com/benjamin-milhet/ToDo_IOS/blob/main/images/deleteCategorie.png?raw=true)
+### Rendu de la page pour ajouter une catégorie
+![alt text](https://github.com/benjamin-milhet/ToDo_IOS/blob/main/images/addCategorie.png?raw=true)
 
-### Rendu du bouton supprimer une catégorie
-![alt text](https://github.com/benjamin-milhet/ToDo_IOS/blob/main/images/deleteCategorie.png?raw=true)
+### Rendu d'une recherche
+![alt text](https://github.com/benjamin-milhet/ToDo_IOS/blob/main/images/recherche.png?raw=true)
 
-### Rendu du bouton supprimer une catégorie
-![alt text](https://github.com/benjamin-milhet/ToDo_IOS/blob/main/images/deleteCategorie.png?raw=true)
+### Rendu de la page des tâches d'une catégorie
+![alt text](https://github.com/benjamin-milhet/ToDo_IOS/blob/main/images/todo.png?raw=true)
 
-### Rendu du bouton supprimer une catégorie
-![alt text](https://github.com/benjamin-milhet/ToDo_IOS/blob/main/images/deleteCategorie.png?raw=true)
+### Rendu du bouton supprimer une tâche
+![alt text](https://github.com/benjamin-milhet/ToDo_IOS/blob/main/images/deleteTodo.png?raw=true)
 
-### Rendu du bouton supprimer une catégorie
-![alt text](https://github.com/benjamin-milhet/ToDo_IOS/blob/main/images/deleteCategorie.png?raw=true)
+### Rendu du bouton pour ajouter une tâche
+![alt text](https://github.com/benjamin-milhet/ToDo_IOS/blob/main/images/addTodo.png?raw=true)
+
+### Rendu du bouton pour voir le détails d'une tâche
+![alt text](https://github.com/benjamin-milhet/ToDo_IOS/blob/main/images/detailTodo.png?raw=true)
 
