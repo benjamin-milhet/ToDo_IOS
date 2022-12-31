@@ -7,10 +7,14 @@
 
 import UIKit
 
+/**
+ *  AddViewController
+ *  @brief Classe permettant d'ajouter une tâche
+ */
 class AddViewController: UIViewController, UITextFieldDelegate {
-    @IBOutlet weak var addNom: UITextField!
-    @IBOutlet weak var addDesc: UITextField!
-    @IBOutlet weak var addDate: UIDatePicker!
+    @IBOutlet weak var addNom: UITextField! // Champs de saisie du nom de la tâche
+    @IBOutlet weak var addDesc: UITextField! // Champs de saisie de la description de la tâche
+    @IBOutlet weak var addDate: UIDatePicker! // Champs de saisie de la date de la tâche
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,27 +7,35 @@
 
 import UIKit
 
+/**
+ *  DetailViewController
+ *  @brief Classe permettant d'afficher les détails d'une tâche
+ */
 class DetailViewController: UIViewController {
-    @IBOutlet weak var nomTache: UILabel!
-    @IBOutlet weak var nomDesc: UILabel!
-    @IBOutlet weak var barreControle: UINavigationItem!
-    @IBOutlet weak var myDate: UILabel!
-    
-    var data: MyData?
+    @IBOutlet weak var nomTache: UILabel! // Label du nom de la tâche
+    @IBOutlet weak var nomDesc: UILabel! // Label de la description de la tâche
+    @IBOutlet weak var barreControle: UINavigationItem! // Barre de navigation
+    @IBOutlet weak var myDate: UILabel! // Label de la date de la tâche
+     
+    var data: MyData? // Tâche à afficher
 
+    /**
+     *  viewDidLoad
+     *  @brief Fonction appelée lors du chargement de la vue
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let tache = data {
-            nomTache.text = tache.nom
-            nomDesc.text = tache.desc
-            barreControle.title = tache.nom
-            myDate.text = tache.convertDate()
-        } else {
-            nomTache.text = "Erreur lors du chargement"
-            nomDesc.text = ""
-            barreControle.title = "Erreur"
-            myDate.text = "Erreur"
+        if let tache = data { // Si la tâche n'est pas nulle
+            nomTache.text = tache.nom // On affiche le nom de la tâche
+            nomDesc.text = tache.desc // On affiche la description de la tâche
+            barreControle.title = tache.nom // On affiche le nom de la tâche dans la barre de navigation
+            myDate.text = tache.convertDate() // On affiche la date de la tâche
+        } else { // Sinon
+            nomTache.text = "Erreur lors du chargement" // On affiche un message d'erreur
+            nomDesc.text = "" // On affiche un message d'erreur
+            barreControle.title = "Erreur" // On affiche un message d'erreur
+            myDate.text = "Erreur" // On affiche un message d'erreur
 
         }
 

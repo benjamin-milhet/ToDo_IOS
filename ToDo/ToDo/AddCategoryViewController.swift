@@ -2,15 +2,19 @@
 //  AddCategoryViewController.swift
 //  ToDo
 //
-//  Created by Flore Milhet on 29/12/2022.
+//  Created by Benjamin Milhet on 29/12/2022.
 //
 
 import UIKit
 
+/**
+ *  AddCategoryViewController
+ *  @brief Classe permettant d'ajouter une catégorie
+ */
 class AddCategoryViewController: UIViewController {
 
-    @IBOutlet weak var addNom: UITextField!
-    @IBOutlet weak var btnAddCategory: UIButton!
+    @IBOutlet weak var addNom: UITextField! // Champs de saisie du nom de la catégorie
+    @IBOutlet weak var btnAddCategory: UIButton! // Bouton d'ajout de la catégorie
     
     override func viewDidLoad() {
         super.viewDidLoad()
