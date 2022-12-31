@@ -17,9 +17,9 @@ Sujet proposé par M. Ginhac (https://github.com/dginhac)
 
 
 ## Rendu final
-### Rendu 
-![alt text](https://github.com/Le-trio-de-l-enfer/Enigma/blob/version-no-bug/1.png?raw=true)
+### Rendu de la page catégorie
+![alt text](https://github.com/benjamin-milhet/ToDo_IOS/blob/main/images/categorie.png?raw=true)
 
-### Rendu 
-![alt text](https://github.com/Le-trio-de-l-enfer/Enigma/blob/version-no-bug/2.png?raw=true)
+### Rendu du bouton supprimer une catégorie
+![alt text](https://github.com/benjamin-milhet/ToDo_IOS/blob/main/images/deleteCategorie.png?raw=true)
 
