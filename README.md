@@ -4,7 +4,7 @@
 
 ## Membre du groupe
 
-  - Benjamin MILHET (https://github.com/Orchanyne)
+  - Benjamin MILHET (https://github.com/benjamin-milhet)
 
 
 Sujet proposé par M. Ginhac (https://github.com/dginhac)
